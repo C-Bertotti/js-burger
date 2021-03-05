@@ -4,57 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>js-burger</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght200;300;400;500;600;&display=swap" rel="stylesheet">
+    <!-- /google font -->
+
+    <!-- style -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- /style -->
+
 </head>
 <body>
-    <header>
-        <h1>create your burger</h1>
-    </header>
-    <main>
-        <input type="text" id="burger__name" placeholder="Name Your Burger"> 
-        <ul>
-            <li>
-                <label for=""> Cheese
-                    <input type="checkbox" class="ingredient" id="cheese" value="6"> Add
-                </label>
-            </li>    
-            <li>
-                <label for=""> Egg
-                    <input type="checkbox" class="ingredient" id="egg" value="4"> Add
-                </label>
-            </li>
-            <li>
-                <label for=""> Mustard
-                    <input type="checkbox" class="ingredient" id="mustard" value="6"> Add
-                </label>
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <label for=""> Tomato
-                    <input type="checkbox" class="ingredient" id="tomato" value="5"> Add
-                </label>
-            </li>    
-            <li>
-                <label for=""> Lettuce
-                    <input type="checkbox" class="ingredient" id="lettuce" value="5"> Add
-                </label>
-            </li>
-            <li>
-                <label for=""> Ketchup
-                    <input type="checkbox" class="ingredient" id="ketchup" value="2"> Add
-                </label>
-            </li>
-        </ul>
-        <label for="coupon">discount coupon
-            <input type="text" placeholder="Name Your Burger"> 
-        </label>
-        <button id="btn__calculate">Calcola</button>
-    </main>
-    <footer>
-        <p>Your Price</p>
-        <p><span>50</span>€</p>
-    </footer>
-
+    <div class="wrapper">
+        <header>
+            <h1>create your burger</h1>
+            <img src="img/burger-top.png" alt="">
+        </header>
+        <main>
+            <input type="text" id="burger__name" class="input__text" placeholder="Name Your Burger"> 
+            <h2>Ingredients</h2>
+            <div class="ingredients__wrapper">
+                <ul class="ingredients__list">
+                    <li>
+                        <label for=""> Cheese
+                            <input type="checkbox" class="ingredient" id="cheese" value="6"> Add
+                        </label>
+                    </li>    
+                    <li>
+                        <label for=""> Egg
+                            <input type="checkbox" class="ingredient" id="egg" value="4"> Add
+                        </label>
+                    </li>
+                    <li>
+                        <label for=""> Mustard
+                            <input type="checkbox" class="ingredient" id="mustard" value="6"> Add
+                        </label>
+                    </li>
+                </ul>
+                <ul class="ingredients__list">
+                    <li>
+                        <label for=""> Tomato
+                            <input type="checkbox" class="ingredient" id="tomato" value="5"> Add
+                        </label>
+                    </li>    
+                    <li>
+                        <label for=""> Lettuce
+                            <input type="checkbox" class="ingredient" id="lettuce" value="5"> Add
+                        </label>
+                    </li>
+                    <li>
+                        <label for=""> Ketchup
+                            <input type="checkbox" class="ingredient" id="ketchup" value="2"> Add
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <label for="coupon">discount coupon
+                <input type="text" placeholder="Name Your Burger"> 
+            </label>
+            <button id="btn__calculate">Calcola</button>
+        </main>
+        <footer>
+            <h3>Your Price</h3>
+            <h3><span>50</span>€</h3>
+        </footer>
+    </div>
     <script src="js/script.js"></script>
 </body>
 </html>

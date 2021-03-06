@@ -16,12 +16,12 @@
 
 <body>
     <div class="wrapper">
-        <header>
+        <header class="bg__primary">
             <h1>create your burger</h1>
             <img src="img/burger-top.png" alt="">
         </header>
         <main>
-            <input type="text" id="burger__name" class="input__text" placeholder="Name Your Burger"> 
+            <input type="text" id="burger__name" class="input--noborder burgerName__input" placeholder="Name Your Burger"> 
             <h2>Ingredients</h2>
             <div class="ingredients__wrapper">
                 <ul class="ingredients__list">
@@ -65,12 +65,13 @@
                     </li>
                 </ul>
             </div>
-            <label for="coupon">discount coupon
-                <input type="text" placeholder="Name Your Burger"> 
-            </label>
-            <button id="btn__calculate">Calcola</button>
+            <div class="coupon__wrapper">
+                <label for="#coupon" class="coupon__label">Discount Coupon</label>
+                <input type="text" id="coupon" class="coupon__input input--noborder bg__primary" placeholder="12354abcdef">     
+            </div>
+            <button id="btn__calculate" class="bg__primary">calculate</button>
         </main>
-        <footer>
+        <footer class="bg__secondary">
             <h3>Your Price</h3>
             <h3><span>50</span>€</h3>
         </footer>

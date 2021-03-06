@@ -6,8 +6,9 @@
 
 /* mix */
 body {
-    background-color: #fff5e2;
+    background-color: rgba(253, 187, 64, .2);
     font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
 }
 
 .wrapper {
@@ -20,8 +21,15 @@ body {
 .wrapper > * {
     padding: 30px 45px;
 }
-/* /mix */
 
+.bg__primary {
+    background-color: #fdbb40;
+}
+.bg__secondary {
+    background-color: #d33359;
+}
+
+/* /mix */
 
 /* typo */
 h1 {
@@ -30,15 +38,23 @@ h1 {
     font-weight: 700;
 }
 h2 {
-    font-weight: 400;
+    font-weight: 600;
 }
-
 /* typo */
 
+/* input/btn */
+.input--noborder {
+    border: none;
+}
+
+input:focus,
+button:focus {
+    outline: none;
+}
+/* /input */
 
 /* header */
 header {
-    background-color: #fdbb40;
     position: relative;
 }
 
@@ -56,22 +72,15 @@ main {
     flex-grow: 1;
 }
 
-.input__text {
-    border: none;
+.burgerName__input {
     font-size: 25px;
     margin: 20px 0;
 }
-.input__text::placeholder {
-    font-weight: 300;
-    opacity: .6;
-}
-.input__text:focus {
-    outline: none;
-}
 
-.ingredients__wrapper {
+.ingredients__wrapper,
+.coupon__wrapper {
     display: flex;
-    margin: 20px 0px;
+    margin: 25px 0px;
 }
 
 .ingredients__list {
@@ -83,9 +92,7 @@ main {
     align-items: center;
     margin-bottom: 15px;
 }
-.ingredients__list li label {
-    font-weight: 400;
-}
+
 .add {
     color: #d33359;
 }
@@ -98,13 +105,40 @@ main {
     margin: 0 10px;
 }
 
+.coupon__input {
+    flex-grow: 1;
+    margin-left: 10px;
+    background-color: rgba(253, 187, 64, .2);
+    padding: 5px;
+    border-radius: 5px;
+}
+#coupon::placeholder {
+    text-transform: uppercase;
+}
 
+#btn__calculate {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-weight: 700;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    transition: transform 0.1s;
+}
 
+#btn__calculate:hover {
+    transform: scale(1.05);
+}
+#btn__calculate:active {
+    transform: scale(1);
+    background-color: rgb(224, 165, 54);
+}
 /* / main */
+
 
 /* footer */
 footer {
-    background-color: #d33359;
     display: flex;
     justify-content: space-between;
 }

@@ -7,7 +7,7 @@
 /* mix */
 body {
     background-color: #fff5e2;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .wrapper {
@@ -27,7 +27,10 @@ body {
 h1 {
     text-transform: capitalize;
     margin-top: 20px;
-    font-weight: 600;
+    font-weight: 700;
+}
+h2 {
+    font-weight: 400;
 }
 
 /* typo */
@@ -59,8 +62,8 @@ main {
     margin: 20px 0;
 }
 .input__text::placeholder {
+    font-weight: 300;
     opacity: .6;
-    font-weight: 100;
 }
 .input__text:focus {
     outline: none;
@@ -68,11 +71,35 @@ main {
 
 .ingredients__wrapper {
     display: flex;
+    margin: 20px 0px;
 }
+
 .ingredients__list {
     flex-basis: 50%;
     list-style: none;
 }
+.ingredients__list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.ingredients__list li label {
+    font-weight: 400;
+}
+.add {
+    color: #d33359;
+}
+
+.ingredients__list img {
+    width: 45px;
+    margin-right: 15px;
+}
+.ingredient {
+    margin: 0 10px;
+}
+
+
+
 /* / main */
 
 /* footer */

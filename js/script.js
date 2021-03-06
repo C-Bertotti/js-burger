@@ -3,6 +3,9 @@ var calculate = document.getElementById('btn__calculate');
 var burgerName = document.getElementById('burger__name');
 var ingredients = document.getElementsByClassName('ingredient');
 
+var total = document.getElementById('total');
+var coupon = document.getElementById('coupon');
+var couponCode = ['12354ABCDEF', 'PROMO20', 'SCONTOSTUDENTI'];
 
 //Creo l'evento al click del bottone
 calculate.addEventListener('click',
@@ -17,8 +20,14 @@ calculate.addEventListener('click',
                     sum += parseInt(ingredients[i].value);
                 }
             }
-            //stampo il nuovo valore della somma
-            console.log(sum);
+            //controllo se è stato inserito un codice sconto
+            if ( couponCode.includes(coupon.value) ) {
+                sum -= sum * 0.2;
+            }
+
+            //stampa la somma
+            total.innerHTML = sum.toFixed(2);
+            
         } else {
             alert('Ricordati di dare un nome al tuo burger!');
         }
